@@ -62,6 +62,11 @@ permalink: pretty
 
 #for posts
 defaults:
+
+collections:
+  blog:
+    output: true
+    permalink: /blog/:name/
   - scope:
       path: ""
       type: "posts"
