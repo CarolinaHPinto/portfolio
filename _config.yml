@@ -1,74 +1,131 @@
+# ---------------------------------------------------------------
 # Site settings
-title: Carolina Pinto
-email: carolinahnpinto@gmail.com
-url: https://CarolinaHPinto.github.io/portfolio
-description: "Portfolio of cybersecurity work samples for a junior-level cyber security professional."
-keywords: "cybersecurity, cyber, security, portfolio, tech"
-skills: "Cybersecurity - Governance - Risk - Compliance"
-meta_author: Pinto Carolina
+# ---------------------------------------------------------------
+remote_theme: "mmistakes/minimal-mistakes@4.28.1"
+minimal_mistakes_skin: "dark"   # options: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 
-# Google webmaster tools
-google_verify:
+locale: "en-US"
+title: "Carolina Pinto"
+title_separator: "|"
+subtitle: "Cybersecurity · Governance, Risk & Compliance"
+name: "Carolina Pinto"
+description: "Cybersecurity portfolio of Carolina Pinto: GRC, incident response, vulnerability management and hands-on security projects."
+url: "https://carolinahpinto.github.io"
+baseurl: "/portfolio"
+repository: "CarolinaHPinto/portfolio"
+teaser: "/assets/images/projects/safe.png"
+logo: # path to a small logo, optional
+masthead_title: "Carolina Pinto"
+breadcrumbs: false
+words_per_minute: 200
 
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
+search: true
+search_full_content: true
 
-# Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
-contact: static
+# ---------------------------------------------------------------
+# Author (shown in the sidebar on the home page, resume and posts)
+# ---------------------------------------------------------------
+author:
+  name: "Carolina Pinto"
+  avatar: "/assets/images/headshot.jpg"
+  bio: "Cybersecurity professional focused on Governance, Risk & Compliance."
+  location: "Miami, Florida"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/carolina-pinto-696675135/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/CarolinaHPinto"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:carolinahnpinto@gmail.com"
 
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: 
-
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary: a7c7e7
-  primary-rgb: 167,199,231
-  secondary: 60a5fa
-  secondary-dark: 2563eb
-
-# Footer settings
 footer:
-  copyright: Carolina Pinto
-  location: Location
-  social: Around the Web
-  credits: Credits
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/carolina-pinto-696675135/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/CarolinaHPinto"
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: linkedin
-    url: https://www.linkedin.com/in/carolina-pinto-696675135/
-  - title: github
-    url: https://github.com/carolinahpinto
+# ---------------------------------------------------------------
+# Reading files
+# ---------------------------------------------------------------
+include:
+  - _pages
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
 
-# Email Address (make sure to include "mailto:" before your email!)
-email:
-  email-url: mailto:carolinahnpinto@gmail.com
-
-# Postal address (add as many lines as necessary)
-location:
-  - line: Miami, Florida
-
-# Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.
-Cyber icons created by <a href="https://www.flaticon.com/free-icons/cyber-attack" title="cyber attack icons">Freepik - Flaticon</a>.'
-
-# Build settings
+# ---------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------
 markdown: kramdown
-permalink: pretty
+kramdown:
+  input: GFM
+permalink: /blog/:year/:month/:title/
+paginate: 8
+paginate_path: /blog/page:num/
+timezone: America/New_York
 
-#for posts
-defaults:
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
 
+# Archive pages for blog tags and categories
+category_archive:
+  type: liquid
+  path: /blog/categories/
+tag_archive:
+  type: liquid
+  path: /blog/tags/
+
+# ---------------------------------------------------------------
+# Collections
+# ---------------------------------------------------------------
 collections:
-  blog:
+  projects:
     output: true
-    permalink: /blog/:name/
+    permalink: /projects/:name/
+
+# ---------------------------------------------------------------
+# Defaults
+# ---------------------------------------------------------------
+defaults:
+  # blog posts
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      permalink: ""
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+      show_date: true
+      toc: false
+  # projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      author_profile: false
+      share: true
+      toc: false
+      classes: wide
+  # pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true

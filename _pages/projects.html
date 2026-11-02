@@ -1,0 +1,41 @@
+---
+title: "Projects"
+permalink: /projects/
+classes: wide
+author_profile: false
+excerpt: "Hands-on cybersecurity work across GRC, incident response, risk and technical labs."
+---
+
+<p>A collection of my cybersecurity work. Filter by area:</p>
+
+{% assign sorted = site.projects | sort: "order" %}
+{% assign cats = sorted | map: "project_category" | uniq %}
+<div class="project-filter" id="project-filter">
+  <button type="button" class="is-active" data-cat="all">All ({{ sorted | size }})</button>
+  {% for c in cats %}
+  {% assign n = sorted | where: "project_category", c | size %}
+  <button type="button" data-cat="{{ c | slugify }}">{{ c }} ({{ n }})</button>
+  {% endfor %}
+</div>
+
+<div class="project-grid" id="project-grid">
+  {% for p in sorted %}
+  <div data-cat="{{ p.project_category | slugify }}" style="display:flex">{% include project-card.html project=p %}</div>
+  {% endfor %}
+</div>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('#project-filter button');
+    var items = document.querySelectorAll('#project-grid > div');
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        buttons.forEach(function (x) { x.classList.remove('is-active'); });
+        b.classList.add('is-active');
+        items.forEach(function (it) {
+          it.style.display = (b.dataset.cat === 'all' || it.dataset.cat === b.dataset.cat) ? 'flex' : 'none';
+        });
+      });
+    });
+  })();
+</script>

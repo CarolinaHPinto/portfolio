@@ -1,0 +1,64 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ---------- Custom styles ---------- */
+$accent: #60a5fa;
+
+.home-intro {
+  font-size: 1.05em;
+  line-height: 1.7;
+  .home-kicker { color: $accent; text-transform: uppercase; letter-spacing: .08em; font-size: .75em; font-weight: 700; margin-bottom: .25em; }
+  h1 { margin-top: 0; }
+}
+
+.section-heading {
+  display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 1px solid rgba(255,255,255,.1); margin: 2.5em 0 1em; padding-bottom: .4em;
+  h2 { margin: 0; border: 0; padding: 0; }
+  a { font-size: .8em; }
+}
+
+.project-grid {
+  display: grid; gap: 1.25em;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  margin-bottom: 2em;
+}
+.project-card {
+  display: flex; flex-direction: column; text-decoration: none !important; color: inherit !important;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 10px; overflow: hidden;
+  transition: transform .15s ease, border-color .15s ease;
+  &:hover { transform: translateY(-3px); border-color: $accent; }
+}
+.project-card__img { background: #a7c7e7; display: flex; align-items: center; justify-content: center; height: 140px;
+  img { max-height: 100px; width: auto; } }
+.project-card__body { padding: 1em 1.1em 1.2em; display: flex; flex-direction: column; gap: .4em; flex: 1; }
+.page__content .project-card p, .page__content .project-card h3 { margin: 0; }
+.page__content .project-card__excerpt { font-size: .72em; line-height: 1.5; }
+.page__content .project-card__title { font-size: 1.05em; }
+.project-card__cat { color: $accent; font-size: .65em; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.project-card__title { margin: 0; font-size: 1em; }
+.project-card__excerpt { margin: 0; font-size: .75em; opacity: .85; line-height: 1.5; }
+
+.project-chip { display: inline-block; font-size: .65em; padding: .2em .7em; border-radius: 999px; margin-right: .4em; width: fit-content; }
+.project-chip--cat { background: rgba(96,165,250,.15); color: $accent; }
+.project-chip--status { background: rgba(250,204,21,.15); color: #facc15; }
+.skill-tag { display: inline-block; font-size: .75em; padding: .15em .6em; margin: .2em .3em .2em 0; border: 1px solid rgba(255,255,255,.15); border-radius: 4px; }
+.project-meta { margin-bottom: 1.5em; }
+
+.project-filter { display: flex; flex-wrap: wrap; gap: .5em; margin-bottom: 1.5em;
+  button { font: inherit; font-size: .7em; padding: .35em .9em; border-radius: 999px; cursor: pointer;
+    background: transparent; color: inherit; border: 1px solid rgba(255,255,255,.2);
+    &.is-active, &:hover { background: $accent; border-color: $accent; color: #0b1220; } } }
+
+.recent-posts { list-style: none; margin: 0; padding: 0;
+  li { padding: .8em 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .post-date { font-size: .7em; opacity: .7; display: block; }
+  a { font-weight: 600; } }
+
+.resume-section h2 { color: $accent; }

@@ -1,3 +1,39 @@
 ---
-layout: default
+layout: single
+author_profile: true
+title: "Hi, I'm Carolina."
+classes: wide
+excerpt: "Cybersecurity professional focused on Governance, Risk & Compliance."
 ---
+
+<div class="home-intro">
+  <p class="home-kicker">Cybersecurity · Governance, Risk &amp; Compliance</p>
+  <!-- PROFESSIONAL STATEMENT: edit this paragraph -->
+  <p>Cybersecurity professional focused on Governance, Risk, and Compliance (GRC) with over 10 years of experience in law, financial services, regulatory compliance, and risk management. Passionate about helping organizations protect information, reduce risk, and achieve compliance through effective security governance.</p>
+  <p>
+    <a href="{{ '/projects/' | relative_url }}" class="btn btn--primary">View my projects</a>
+    <a href="{{ '/resume/' | relative_url }}" class="btn btn--inverse">Resume</a>
+  </p>
+</div>
+
+<div class="section-heading">
+  <h2>Featured projects</h2>
+  <a href="{{ '/projects/' | relative_url }}">All {{ site.projects | size }} projects &rarr;</a>
+</div>
+{% assign featured = site.projects | where: "featured", true | sort: "order" %}
+<div class="project-grid">
+  {% for p in featured limit: 6 %}{% include project-card.html project=p %}{% endfor %}
+</div>
+
+<div class="section-heading">
+  <h2>Latest from the blog</h2>
+  <a href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
+</div>
+<ul class="recent-posts">
+  {% for post in site.posts limit: 3 %}
+  <li>
+    <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
