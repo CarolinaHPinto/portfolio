@@ -2,18 +2,17 @@
 # Site settings
 # ---------------------------------------------------------------
 remote_theme: "mmistakes/minimal-mistakes@4.28.1"
-minimal_mistakes_skin: "dark"   # options: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+minimal_mistakes_skin: "default"   # colors are customized in assets/css/main.scss
 
 locale: "en-US"
 title: "Carolina Pinto"
 title_separator: "|"
-subtitle: "Cybersecurity · Governance, Risk & Compliance"
+subtitle: "Cybersecurity GRC Analyst"
 name: "Carolina Pinto"
 description: "Cybersecurity portfolio of Carolina Pinto: GRC, incident response, vulnerability management and hands-on security projects."
 url: "https://carolinahpinto.github.io"
 baseurl: "/portfolio"
 repository: "CarolinaHPinto/portfolio"
-teaser: "/assets/images/projects/safe.png"
 logo: # path to a small logo, optional
 masthead_title: "Carolina Pinto"
 breadcrumbs: false
@@ -28,7 +27,7 @@ search_full_content: true
 author:
   name: "Carolina Pinto"
   avatar: "/assets/images/headshot.jpg"
-  bio: "Cybersecurity professional focused on Governance, Risk & Compliance."
+  bio: "Helping organizations turn regulation into practical security."
   location: "Miami, Florida"
   links:
     - label: "LinkedIn"
@@ -108,7 +107,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      share: true
+      share: false
       related: true
       show_date: true
       toc: false
@@ -119,9 +118,9 @@ defaults:
     values:
       layout: project
       author_profile: false
-      share: true
+      share: false
       toc: false
-      classes: wide
+      classes: [wide, project-page]
   # pages
   - scope:
       path: "_pages"

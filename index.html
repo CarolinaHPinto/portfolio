@@ -1,28 +1,53 @@
 ---
 layout: single
-author_profile: true
-title: "Hi, I'm Carolina."
-classes: wide
-excerpt: "Cybersecurity professional focused on Governance, Risk & Compliance."
+title: "Carolina Pinto"
+author_profile: false
+classes: [wide, home-page]
+excerpt: "GRC-focused cybersecurity professional bringing 10+ years of legal, financial-services and compliance experience to security risk."
 ---
 
-<div class="home-intro">
-  <p class="home-kicker">Cybersecurity · Governance, Risk &amp; Compliance</p>
-  <!-- PROFESSIONAL STATEMENT: edit this paragraph -->
-  <p>Cybersecurity professional focused on Governance, Risk, and Compliance (GRC) with over 10 years of experience in law, financial services, regulatory compliance, and risk management. Passionate about helping organizations protect information, reduce risk, and achieve compliance through effective security governance.</p>
-  <p>
-    <a href="{{ '/projects/' | relative_url }}" class="btn btn--primary">View my projects</a>
-    <a href="{{ '/resume/' | relative_url }}" class="btn btn--inverse">Resume</a>
-  </p>
-</div>
+<section class="hero">
+  <img class="hero__photo" src="{{ '/assets/images/headshot.jpg' | relative_url }}" alt="Carolina Pinto">
+  <div>
+    <p class="hero__kicker">Cybersecurity GRC Analyst · Risk, Compliance &amp; Governance</p>
+    <h1>Hi, I'm Carolina.</h1>
+    <!-- SHORT SUMMARY: edit these two lines -->
+    <p class="hero__lead">GRC-focused cybersecurity professional bringing 10+ years of legal, financial-services and compliance experience to security risk.</p>
+    <p class="hero__tag">Helping organizations turn regulation into practical security.</p>
+    <div class="hero__creds">
+      <span>Google Cybersecurity Certificate</span>
+      <span>CompTIA Security+ (Dec 2026)</span>
+      <span>LL.M., Fordham Law</span>
+      <span>English · Portuguese · Spanish</span>
+    </div>
+    <div class="hero__actions">
+      <a href="{{ '/projects/' | relative_url }}" class="btn btn--primary">View my projects</a>
+      <a href="{{ '/resume/' | relative_url }}" class="btn btn--outline">Resume</a>
+      <a href="{{ '/about/' | relative_url }}" class="btn btn--outline">About me</a>
+    </div>
+  </div>
+</section>
 
 <div class="section-heading">
   <h2>Featured projects</h2>
   <a href="{{ '/projects/' | relative_url }}">All {{ site.projects | size }} projects &rarr;</a>
 </div>
 {% assign featured = site.projects | where: "featured", true | sort: "order" %}
-<div class="project-grid">
+<div class="project-grid project-grid--3">
   {% for p in featured limit: 6 %}{% include project-card.html project=p %}{% endfor %}
+</div>
+
+<div class="section-heading">
+  <h2>Areas of focus</h2>
+</div>
+<div class="focus-grid">
+  {% for c in site.data.project_categories %}
+  {% assign n = site.projects | where: "category_slug", c.slug | size %}
+  <a class="focus-tile" href="{{ '/projects/' | relative_url }}#{{ c.slug }}">
+    <span class="focus-tile__icon"><i class="{{ c.icon }}"></i></span>
+    <span><strong>{{ c.name }}</strong><small>{{ n }} project{% if n != 1 %}s{% endif %} · {{ c.blurb }}</small></span>
+  </a>
+  {% endfor %}
 </div>
 
 <div class="section-heading">

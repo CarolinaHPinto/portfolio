@@ -1,12 +1,9 @@
 {% assign p = include.project %}
-<a class="project-card" href="{{ p.url | relative_url }}">
-  {% if p.header.teaser %}
-  <div class="project-card__img"><img src="{{ p.header.teaser | relative_url }}" alt="" loading="lazy"></div>
-  {% endif %}
-  <div class="project-card__body">
-    <span class="project-card__cat">{{ p.project_category }}</span>
-    <h3 class="project-card__title">{{ p.title }}</h3>
-    <p class="project-card__excerpt">{{ p.excerpt | strip_html | truncate: 150 }}</p>
-    {% if p.status %}<span class="project-chip project-chip--status">{{ p.status }}</span>{% endif %}
-  </div>
+{% assign cat = site.data.project_categories | where: "slug", p.category_slug | first %}
+<a class="project-card" href="{{ p.url | relative_url }}" data-cat="{{ p.category_slug }}">
+  <span class="project-card__icon" aria-hidden="true"><i class="{{ cat.icon }}"></i></span>
+  <span class="project-card__cat">{{ cat.name }}</span>
+  <span class="project-card__title">{{ p.title }}</span>
+  <span class="project-card__excerpt">{{ p.excerpt | strip_html }}</span>
+  <span class="project-card__more">View project <i class="fa-solid fa-arrow-right"></i></span>
 </a>

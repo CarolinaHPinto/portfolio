@@ -1,0 +1,25 @@
+# Order here = order on the site. Icons are Font Awesome names (https://fontawesome.com/icons).
+- name: "Governance, Risk & Compliance"
+  slug: grc
+  icon: "fa-solid fa-scale-balanced"
+  blurb: "Framework assessments, audits, vendor risk and control reviews."
+- name: "Risk & Threat Assessment"
+  slug: risk-threat
+  icon: "fa-solid fa-magnifying-glass-chart"
+  blurb: "Vulnerability analysis, threat modeling and threat intelligence."
+- name: "Incident Response"
+  slug: incident-response
+  icon: "fa-solid fa-bell"
+  blurb: "Investigating, documenting and recovering from security incidents."
+- name: "Network Security"
+  slug: network-security
+  icon: "fa-solid fa-network-wired"
+  blurb: "Network design, scanning and packet analysis."
+- name: "Security Automation"
+  slug: automation
+  icon: "fa-solid fa-code"
+  blurb: "Python scripts that automate everyday security tasks."
+- name: "Linux & SQL"
+  slug: linux-sql
+  icon: "fa-solid fa-terminal"
+  blurb: "Command-line administration and querying security data."

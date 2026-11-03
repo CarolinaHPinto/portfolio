@@ -1,29 +1,19 @@
 ---
 title: "Resume"
 permalink: /resume/
-classes: resume-section
+author_profile: false
+classes: [wide, full-page]
+excerpt: "Carolina Pinto · Cybersecurity GRC Analyst"
 ---
 
-<!-- Upload your resume as assets/resume.pdf, then this button will work. -->
-<a href="{{ '/assets/resume.pdf' | relative_url }}" class="btn btn--primary" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Download PDF</a>
+<!-- To update: replace assets/resume.pdf with your newest resume (keep the same file name). -->
+<div class="resume-actions">
+  <a href="{{ '/assets/resume.pdf' | relative_url }}" class="btn btn--primary" download="Carolina_Pinto_Cybersecurity_GRC_Resume.pdf"><i class="fa-solid fa-download"></i> Download PDF</a>
+  <a href="{{ '/assets/resume.pdf' | relative_url }}" class="btn btn--outline" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> Open in new tab</a>
+  <a href="{{ '/about/' | relative_url }}" class="btn btn--outline">About me</a>
+</div>
 
-## Professional Summary
-Cybersecurity professional focused on Governance, Risk, and Compliance (GRC) with over 10 years of experience in law, financial services, regulatory compliance, and risk management.
-
-## Skills & Expertise
-- **Languages:** Python, SQL (BigQuery, MySQL)
-- **Tools:** Linux, Windows, SIEM (Splunk), Network Protocol Analyzers (Wireshark, Tcpdump, Nmap), IDS/IPS (Suricata)
-- **Security Practices:** Information Security, Network Security (NDR), Vulnerability Assessment, Threat Analysis (IDS/IPS), Log Analysis, Security Frameworks and Controls (NIST)
-- **Software Platforms:** Google Workspace, Microsoft Suite, Slack, ChatGPT
-- **Strengths:** Problem-Solving, Collaboration, Attention to Detail, Calmness Under Pressure
-
-## Experience
-<!-- Add roles: Title — Company (dates), then 2–4 bullet points each. -->
-*To be added.*
-
-## Certifications
-<!-- e.g. Google Cybersecurity Certificate, CompTIA Security+ ... -->
-*To be added.*
-
-## Education
-*To be added.*
+<div class="resume-pages">
+  <img src="{{ '/assets/images/resume-page-1.png' | relative_url }}" alt="Carolina Pinto resume, page 1">
+  <img src="{{ '/assets/images/resume-page-2.png' | relative_url }}" alt="Carolina Pinto resume, page 2">
+</div>

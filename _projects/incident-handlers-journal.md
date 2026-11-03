@@ -1,14 +1,14 @@
 ---
 title: "Incident Handler's Journal"
-excerpt: "Clear written documentation of cybersecurity events, including event descriptions, tools used and lessons learned."
-project_category: "Incident Response"
-order: 5
-status: "Write-up coming soon"
-header:
-  teaser: /assets/images/projects/handlersjournal.png
-skills: [Incident Documentation, Wireshark, Splunk]
-project_url:
+excerpt: "Ongoing journal of incident investigations, starting with a ransomware attack on a healthcare clinic."
+category_slug: incident-response
+order: 12
+skills: ["Incident Documentation", "5 W's", "Ransomware", "Phishing"]
+project_url: "https://drive.google.com/file/d/12EHNo7pZeQVsu06-AGEaD00O0nt3-2Ld/view?usp=sharing"
 ---
 
 ## Overview
-Provided clear and concise written documentation of cybersecurity events, including detailed event descriptions, tools used, and lessons learned throughout the process.
+A running journal used to record findings, tools and lessons learned from incident response activities.
+
+## First entry
+A ransomware attack shut down a small U.S. primary-care clinic after a phishing email let attackers in. I documented the five W's (who, what, when, where, why), the tools I'd expect to use (EDR, SIEM, network monitoring) and initial takeaways.
