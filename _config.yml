@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 remote_theme: "mmistakes/minimal-mistakes@4.28.1"
 minimal_mistakes_skin: "default"   # leave as default; colors live in assets/css/main.scss
-color_mode: "light"               # "light" or "dark"
+color_mode: "gray"                # "light", "gray" or "dark"
 
 locale: "en-US"
 title: "Carolina Pinto"

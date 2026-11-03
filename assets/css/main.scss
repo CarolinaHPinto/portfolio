@@ -18,6 +18,17 @@ $card:      #111926;   // cards
 $bg:        #0b121c;   // page background
 $btn-bg:    #3b82c4;   // primary button
 $btn-text:  #ffffff;
+{% elsif site.color_mode == "gray" %}
+$navy:      #1b3556;   // headings
+$accent:    #2a6496;   // links, icons, highlights
+$ink:       #1f2937;   // body text
+$muted:     #5b6778;   // secondary text
+$line:      #d8dee7;   // borders
+$surface:   #e6eaf0;   // soft panels (footer, chips)
+$card:      #ffffff;   // cards stand out on the gray
+$bg:        #eef1f5;   // page background
+$btn-bg:    #1b3556;   // primary button
+$btn-text:  #ffffff;
 {% else %}
 $navy:      #1e3a5f;   // headings (matches the resume)
 $accent:    #2f6f9f;   // links, icons, highlights
@@ -58,7 +69,7 @@ body { -webkit-font-smoothing: antialiased; }
 .page__title, h1, h2, h3 { color: $navy; letter-spacing: -0.01em; }
 .page__content h2 { border-bottom: 0; font-size: 1.25em; margin-top: 1.8em; }
 .page__content p, .page__content li { line-height: 1.7; }
-.masthead { border-bottom: 1px solid $line; background: $bg; }
+.masthead { border-bottom: 1px solid $line; background: {% if site.color_mode == "gray" %}#ffffff{% else %}$bg{% endif %}; }
 .masthead__inner-wrap { padding: .8em 1em; }
 .site-title { font-weight: 700; color: $navy; }
 .site-subtitle { color: $muted; font-weight: 500; }
@@ -173,3 +184,13 @@ body { -webkit-font-smoothing: antialiased; }
 .archive__item-excerpt { color: $muted; }
 .archive__item { padding-bottom: .4em; border-bottom: 1px solid $line; margin-bottom: 1.2em; }
 .page__taxonomy-item { border-radius: 999px; }
+
+{% if site.color_mode == "gray" %}
+/* Gray mode: white surfaces float on the gray background */
+.project-meta, .highlight-grid div { background: $card; }
+.hero__creds span { background: $card; }
+.resume-pages img { box-shadow: 0 10px 28px rgba(27,53,86,.12); }
+.project-card, .focus-tile { box-shadow: 0 1px 2px rgba(27,53,86,.05); }
+.sidebar .author__avatar img { box-shadow: 0 0 0 4px $card; }
+.masthead__inner-wrap, .greedy-nav, .greedy-nav .hidden-links { background: #ffffff; }
+{% endif %}
