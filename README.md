@@ -1,5 +1,13 @@
 # Carolina Pinto · Cybersecurity Portfolio
 
+### 👉 [View the live portfolio: carolinahpinto.github.io/portfolio](https://carolinahpinto.github.io/portfolio/)
+
+Cybersecurity GRC analyst · [Projects](https://carolinahpinto.github.io/portfolio/projects/) · [Blog](https://carolinahpinto.github.io/portfolio/blog/) · [Resume](https://carolinahpinto.github.io/portfolio/resume/) · [LinkedIn](https://www.linkedin.com/in/carolina-pinto-696675135/)
+
+---
+
+*The rest of this page is notes for editing the site.*
+
 Built with Jekyll and the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme, hosted on GitHub Pages.
 
 ## Where things live
