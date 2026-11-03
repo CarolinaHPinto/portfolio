@@ -16,9 +16,10 @@ excerpt: "Carolina Pinto · Cybersecurity GRC Analyst"
 <div class="resume-pages">
   <div class="resume-sheet">
     <img src="{{ '/assets/images/resume-page-1.png' | relative_url }}" alt="Carolina Pinto resume, page 1">
-    <a class="resume-hotspot" style="left:22.94%;top:9.27%;width:16.96%;height:1.52%" href="mailto:carolinahnpinto@gmail.com" aria-label="Email Carolina"></a>
-    <a class="resume-hotspot" style="left:66.73%;top:9.27%;width:4.22%;height:1.52%" href="https://github.com/CarolinaHPinto" target="_blank" rel="noopener" aria-label="GitHub"></a>
-    <a class="resume-hotspot" style="left:71.98%;top:9.27%;width:5.05%;height:1.52%" href="https://www.linkedin.com/in/carolina-pinto-696675135/" target="_blank" rel="noopener" aria-label="LinkedIn"></a>
+    <a class="resume-hotspot" style="left:17.88%;top:9.27%;width:9.12%;height:1.52%" href="tel:+13054959695" aria-label="Call Carolina"></a>
+    <a class="resume-hotspot" style="left:28.02%;top:9.27%;width:16.96%;height:1.52%" href="mailto:carolinahnpinto@gmail.com" aria-label="Email Carolina"></a>
+    <a class="resume-hotspot" style="left:71.81%;top:9.27%;width:4.22%;height:1.52%" href="https://github.com/CarolinaHPinto" target="_blank" rel="noopener" aria-label="GitHub"></a>
+    <a class="resume-hotspot" style="left:77.06%;top:9.27%;width:5.05%;height:1.52%" href="https://www.linkedin.com/in/carolina-pinto-696675135/" target="_blank" rel="noopener" aria-label="LinkedIn"></a>
   </div>
   <img src="{{ '/assets/images/resume-page-2.png' | relative_url }}" alt="Carolina Pinto resume, page 2">
 </div>
