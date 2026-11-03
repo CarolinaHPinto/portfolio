@@ -194,3 +194,7 @@ body { -webkit-font-smoothing: antialiased; }
 .sidebar .author__avatar img { box-shadow: 0 0 0 4px $card; }
 .masthead__inner-wrap, .greedy-nav, .greedy-nav .hidden-links { background: #ffffff; }
 {% endif %}
+
+.resume-sheet { position: relative; width: 100%; max-width: 850px; line-height: 0;
+  img { max-width: 100%; } }
+.resume-hotspot { position: absolute; border-radius: 3px; &:hover { background: rgba($accent,.15); } }

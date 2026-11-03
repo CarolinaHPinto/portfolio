@@ -1,7 +1,7 @@
 ---
 title: "Python: Finding Patterns with Regular Expressions"
 excerpt: "Wrote regular expressions to extract device IDs and IP addresses from logs to flag unusual logins and outdated devices."
-category_slug: automation
+category_slug: python
 order: 18
 skills: ["Python", "Regex", "Log Analysis"]
 project_url: "https://drive.google.com/file/d/1Np5FvDvO0vLmeXeG56kV3B9csYdYhRcc/view?usp=sharing"

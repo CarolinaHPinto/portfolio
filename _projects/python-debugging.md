@@ -1,7 +1,7 @@
 ---
 title: "Python: Debugging Security Code"
 excerpt: "Found and fixed syntax, runtime and logic errors so automated security processes run correctly."
-category_slug: automation
+category_slug: python
 order: 21
 skills: ["Python", "Debugging", "Error Handling"]
 project_url: "https://drive.google.com/file/d/1-L_qWtuLWOWtrjwc5lGndAku1kb6_XKr/view?usp=sharing"

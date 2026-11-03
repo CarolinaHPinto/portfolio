@@ -15,9 +15,9 @@
   slug: network-security
   icon: "fa-solid fa-network-wired"
   blurb: "Network design, scanning and packet analysis."
-- name: "Security Automation"
-  slug: automation
-  icon: "fa-solid fa-code"
+- name: "Python & Automation"
+  slug: python
+  icon: "fa-brands fa-python"
   blurb: "Python scripts that automate everyday security tasks."
 - name: "Linux & SQL"
   slug: linux-sql
