@@ -7,12 +7,29 @@
 /* ============================================================
    PALETTE: change these to re-color the whole site
    ============================================================ */
-$navy:      #1e3a5f;   // headings, primary buttons (matches the resume)
+{% if site.color_mode == "dark" %}
+$navy:      #e6edf5;   // headings
+$accent:    #6ea8dc;   // links, icons, highlights
+$ink:       #cfd8e3;   // body text
+$muted:     #8b9bb0;   // secondary text
+$line:      #253244;   // borders
+$surface:   #141d2b;   // soft panels
+$card:      #111926;   // cards
+$bg:        #0b121c;   // page background
+$btn-bg:    #3b82c4;   // primary button
+$btn-text:  #ffffff;
+{% else %}
+$navy:      #1e3a5f;   // headings (matches the resume)
 $accent:    #2f6f9f;   // links, icons, highlights
 $ink:       #1f2937;   // body text
 $muted:     #64748b;   // secondary text
 $line:      #e5e7eb;   // borders
-$surface:   #f6f8fb;   // soft background panels
+$surface:   #f6f8fb;   // soft panels
+$card:      #ffffff;   // cards
+$bg:        #ffffff;   // page background
+$btn-bg:    #1e3a5f;   // primary button
+$btn-text:  #ffffff;
+{% endif %}
 
 /* Theme variables (set before the theme is imported) */
 $sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -27,6 +44,8 @@ $masthead-link-color: $ink;
 $masthead-link-color-hover: $accent;
 $border-color: $line;
 $footer-background-color: $surface;
+$background-color: $bg;
+$code-background-color: $surface;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
@@ -39,16 +58,16 @@ body { -webkit-font-smoothing: antialiased; }
 .page__title, h1, h2, h3 { color: $navy; letter-spacing: -0.01em; }
 .page__content h2 { border-bottom: 0; font-size: 1.25em; margin-top: 1.8em; }
 .page__content p, .page__content li { line-height: 1.7; }
-.masthead { border-bottom: 1px solid $line; background: rgba(255,255,255,.95); }
+.masthead { border-bottom: 1px solid $line; background: $bg; }
 .masthead__inner-wrap { padding: .8em 1em; }
 .site-title { font-weight: 700; color: $navy; }
 .site-subtitle { color: $muted; font-weight: 500; }
 .greedy-nav a { font-weight: 500; font-size: .9em; }
 .greedy-nav__toggle::before { background-color: $navy; }
 .btn { border-radius: 6px; font-weight: 600; padding: .65em 1.2em; }
-.btn--primary { background: $navy; &:hover { background: $accent; } }
+.btn--primary { background: $btn-bg; color: $btn-text !important; &:hover { background: $accent; } }
 .btn--outline { background: transparent; border: 1px solid $navy; color: $navy !important;
-  &:hover { background: $navy; color: #fff !important; } }
+  &:hover { background: $btn-bg; border-color: $btn-bg; color: $btn-text !important; } }
 .page__footer { border-top: 1px solid $line; color: $muted; }
 .page__footer footer { margin-top: 1.5em; }
 .author__avatar img { border: 0; }
@@ -77,18 +96,18 @@ body { -webkit-font-smoothing: antialiased; }
 
 .focus-grid { display: grid; gap: .8em; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
 .focus-tile { display: flex; gap: .8em; align-items: flex-start; padding: 1em; border: 1px solid $line; border-radius: 10px;
-  text-decoration: none !important; color: $ink !important; background: #fff; transition: border-color .15s, box-shadow .15s;
+  text-decoration: none !important; color: $ink !important; background: $card; transition: border-color .15s, box-shadow .15s;
   &:hover { border-color: $accent; box-shadow: 0 4px 14px rgba(30,58,95,.08); }
   strong { display: block; color: $navy; font-size: .85em; }
   small { color: $muted; font-size: .72em; line-height: 1.4; display: block; margin-top: .2em; } }
 .focus-tile__icon, .project-card__icon { flex: none; width: 2.3em; height: 2.3em; border-radius: 8px; display: grid; place-items: center;
-  background: rgba(47,111,159,.1); color: $accent; font-size: .9em; }
+  background: rgba($accent,.12); color: $accent; font-size: .9em; }
 
 /* ============================================================
    Project cards and grid
    ============================================================ */
 .project-grid { display: grid; gap: 1em; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); margin-bottom: 2em; }
-.project-card { display: flex; flex-direction: column; gap: .45em; padding: 1.2em; background: #fff; border: 1px solid $line; border-radius: 10px;
+.project-card { display: flex; flex-direction: column; gap: .45em; padding: 1.2em; background: $card; border: 1px solid $line; border-radius: 10px;
   text-decoration: none !important; color: $ink !important; transition: transform .15s, border-color .15s, box-shadow .15s;
   &:hover { transform: translateY(-2px); border-color: $accent; box-shadow: 0 6px 18px rgba(30,58,95,.08); } }
 .project-card__icon { margin-bottom: .3em; }
@@ -99,17 +118,17 @@ body { -webkit-font-smoothing: antialiased; }
 
 .project-filter { display: flex; flex-wrap: wrap; gap: .5em; margin: 1em 0 1.5em;
   button { font: inherit; font-size: .72em; font-weight: 500; padding: .45em 1em; border-radius: 999px; cursor: pointer;
-    background: #fff; color: $ink; border: 1px solid $line; display: inline-flex; gap: .45em; align-items: center;
+    background: $card; color: $ink; border: 1px solid $line; display: inline-flex; gap: .45em; align-items: center;
     i { color: $accent; }
     &:hover { border-color: $accent; }
-    &.is-active { background: $navy; border-color: $navy; color: #fff; i { color: #fff; } } } }
+    &.is-active { background: $btn-bg; border-color: $btn-bg; color: $btn-text; i { color: $btn-text; } } } }
 
 /* Project detail page */
 .project-meta { display: flex; flex-direction: column; align-items: flex-start; gap: .8em; padding: 1.2em; margin-bottom: 1.5em;
   background: $surface; border: 1px solid $line; border-radius: 10px; }
 .project-chip { font-size: .75em; font-weight: 600; color: $accent; i { margin-right: .3em; } }
 .project-skills { display: flex; flex-wrap: wrap; gap: .4em; }
-.skill-tag { font-size: .72em; padding: .25em .7em; background: #fff; border: 1px solid $line; border-radius: 6px; }
+.skill-tag { font-size: .72em; padding: .25em .7em; background: $card; border: 1px solid $line; border-radius: 6px; }
 .project-back a { font-size: .85em; font-weight: 500; text-decoration: none; }
 .project-page .pagination--pager, .project-page .page__meta { display: none; }
 
@@ -147,3 +166,10 @@ body { -webkit-font-smoothing: antialiased; }
 }
 .home-page .page__inner-wrap, .full-page .page__inner-wrap, .project-page .page__inner-wrap { margin-left: auto !important; margin-right: auto !important; float: none !important; }
 .page { padding-top: 1.2em; }
+.page__footer-follow .fa-github, .author__urls .fa-github { color: $ink !important; }
+
+/* Blog list */
+.archive__item-title a { text-decoration: none; color: $navy; &:hover { color: $accent; } }
+.archive__item-excerpt { color: $muted; }
+.archive__item { padding-bottom: .4em; border-bottom: 1px solid $line; margin-bottom: 1.2em; }
+.page__taxonomy-item { border-radius: 999px; }

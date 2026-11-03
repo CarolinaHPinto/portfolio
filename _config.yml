@@ -2,7 +2,8 @@
 # Site settings
 # ---------------------------------------------------------------
 remote_theme: "mmistakes/minimal-mistakes@4.28.1"
-minimal_mistakes_skin: "default"   # colors are customized in assets/css/main.scss
+minimal_mistakes_skin: "default"   # leave as default; colors live in assets/css/main.scss
+color_mode: "light"               # "light" or "dark"
 
 locale: "en-US"
 title: "Carolina Pinto"
