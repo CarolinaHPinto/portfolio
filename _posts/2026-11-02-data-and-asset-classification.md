@@ -1,6 +1,6 @@
 ---
 title: "Data and Asset Classification: Not All Information Is Created Equal"
-date: 2026-11-04
+date: 2026-11-02
 categories: [GRC & Frameworks]
 tags: [data classification, asset management, pii, grc]
 excerpt: "Public, private, sensitive and confidential: how the four data types map to low- and high-level assets, and why classification tells you where to focus."
