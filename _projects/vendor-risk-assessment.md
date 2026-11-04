@@ -5,6 +5,9 @@ category_slug: grc
 order: 2
 featured: true
 skills: ["Third-Party Risk", "SOC 2 Type II", "GLBA", "SEC Guidance", "Risk Memo"]
+deliverable: "/assets/projects/vendor-risk-assessment.pdf"
+deliverable_pages: 3
+preview: "/assets/images/projects/vendor-risk-assessment.jpg"
 project_url: "https://drive.google.com/file/d/1HBYvJmnfv15PhJnZpKBV_T5YYslOQ22B/view?usp=sharing"
 ---
 

@@ -4,6 +4,10 @@ excerpt: "Replaced a legacy ring network with a resilient hybrid star topology, 
 category_slug: network-security
 order: 13
 skills: ["Network Architecture", "CIA Triad", "Firewall", "VPN", "Redundancy"]
+deliverable: "/assets/projects/network-redesign.pdf"
+deliverable_pages: 14
+preview: "/assets/images/projects/network-redesign.jpg"
+preview_caption: "Slide 5: the redesigned network diagram"
 project_url: "https://docs.google.com/presentation/d/1g8KtpB_n-q_KFgF_7wxNcp__cYyRR953eWIZ-d4s9qw/view"
 ---
 

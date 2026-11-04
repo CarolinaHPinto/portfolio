@@ -5,6 +5,9 @@ category_slug: incident-response
 order: 9
 featured: true
 skills: ["NIST CSF", "DoS Analysis", "Firewall Rules", "IDS/IPS", "Incident Documentation"]
+deliverable: "/assets/projects/icmp-flood-incident.pdf"
+deliverable_pages: 2
+preview: "/assets/images/projects/icmp-flood-incident.jpg"
 project_url: "https://drive.google.com/file/d/1VIEJvGct89KvTzloB_TJZpq6q832Fjlq/view?usp=sharing"
 ---
 

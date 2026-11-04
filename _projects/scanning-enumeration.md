@@ -4,6 +4,11 @@ excerpt: "Mapped a lab network with Nmap, SMB, WMI, LDAP and ffuf, and verified 
 category_slug: network-security
 order: 14
 skills: ["Nmap / Zenmap", "SMB Enumeration", "WMI", "LDAP", "ffuf"]
+deliverable: "/assets/projects/scanning-enumeration.pdf"
+deliverable_pages: 3
+preview: "/assets/images/projects/scanning-enumeration.jpg"
+deliverable_extra: "/assets/projects/scanning-enumeration.xlsx"
+deliverable_extra_label: "Download the spreadsheet (.xlsx)"
 project_url: "https://docs.google.com/spreadsheets/d/1IQu6KAqTtfwqnyxUTeSFPst_GSQCAwgRZUE9ivPKx4s/view"
 ---
 

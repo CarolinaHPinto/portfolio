@@ -4,6 +4,9 @@ excerpt: "Used Wireshark logs to identify a SYN flood from a single IP and expla
 category_slug: incident-response
 order: 10
 skills: ["Wireshark", "TCP Handshake", "DoS vs DDoS", "Traffic Analysis"]
+deliverable: "/assets/projects/syn-flood-incident.pdf"
+deliverable_pages: 1
+preview: "/assets/images/projects/syn-flood-incident.jpg"
 project_url: "https://drive.google.com/file/d/1l_ntSamF4qztjJrwwAsNHhKce0SiQj1N/view?usp=sharing"
 ---
 

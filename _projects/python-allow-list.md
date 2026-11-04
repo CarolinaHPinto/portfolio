@@ -4,6 +4,9 @@ excerpt: "Built an algorithm that parses an allow list of IP addresses and remov
 category_slug: python
 order: 20
 skills: ["Python", "Algorithms", "File Handling", "Access Control"]
+deliverable: "/assets/projects/python-allow-list.pdf"
+deliverable_pages: 2
+preview: "/assets/images/projects/python-allow-list.jpg"
 project_url: "https://drive.google.com/file/d/1b4u7_MDlf2Ae8q5GkGfiAWOtGZcczkj2/view?usp=sharing"
 ---
 

@@ -4,6 +4,9 @@ excerpt: "Confirmed a malicious file hash with VirusTotal and mapped its indicat
 category_slug: risk-threat
 order: 8
 skills: ["Threat Intelligence", "VirusTotal", "IoCs", "Malware Analysis"]
+deliverable: "/assets/projects/pyramid-of-pain.pdf"
+deliverable_pages: 2
+preview: "/assets/images/projects/pyramid-of-pain.jpg"
 project_url: "https://drive.google.com/file/d/14uNWu5Z62rkdF2jP16HYd5qZN_cXlbCA/view?usp=sharing"
 ---
 

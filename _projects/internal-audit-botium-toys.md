@@ -5,6 +5,9 @@ category_slug: grc
 order: 3
 featured: true
 skills: ["NIST CSF", "Controls Assessment", "PCI DSS", "GDPR", "SOC 1 / SOC 2"]
+deliverable: "/assets/projects/internal-audit-botium-toys.pdf"
+deliverable_pages: 4
+preview: "/assets/images/projects/internal-audit-botium-toys.jpg"
 project_url: "https://drive.google.com/file/d/1q3VKqFiietph1GPd34FERVJeifhQVSaG/view?usp=sharing"
 ---
 

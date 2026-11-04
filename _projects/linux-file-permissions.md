@@ -4,6 +4,9 @@ excerpt: "Audited and corrected file and directory permissions to match the orga
 category_slug: linux-sql
 order: 22
 skills: ["Linux", "chmod", "ls -la", "Least Privilege"]
+deliverable: "/assets/projects/linux-file-permissions.pdf"
+deliverable_pages: 3
+preview: "/assets/images/projects/linux-file-permissions.jpg"
 project_url: "https://drive.google.com/file/d/1ySCEE0i4-OrXoKuyXKcXpj4xPNJleTln/view?usp=sharing"
 ---
 

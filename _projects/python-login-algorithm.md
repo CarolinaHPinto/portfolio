@@ -4,6 +4,9 @@ excerpt: "Wrote a function that checks usernames against an approved list and ve
 category_slug: python
 order: 17
 skills: ["Python", "Functions", "Conditionals", "Access Control"]
+deliverable: "/assets/projects/python-login-algorithm.pdf"
+deliverable_pages: 2
+preview: "/assets/images/projects/python-login-algorithm.jpg"
 project_url: "https://drive.google.com/file/d/1n9mNfzYym_jq_FSwLei1VETB_Q8f4ASS/view?usp=sharing"
 ---
 

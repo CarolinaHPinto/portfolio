@@ -2,6 +2,7 @@
 layout: single
 ---
 {% assign cat = site.data.project_categories | where: "slug", page.category_slug | first %}
+{% assign doc_name = page.title | slugify | append: ".pdf" %}
 <div class="project-meta">
   <span class="project-chip"><i class="{{ cat.icon }}"></i> {{ cat.name }}</span>
   {% if page.skills %}
@@ -9,11 +10,25 @@ layout: single
     {% for s in page.skills %}<span class="skill-tag">{{ s }}</span>{% endfor %}
   </div>
   {% endif %}
-  {% if page.project_url %}
+  {% if page.deliverable %}
+  <div class="project-actions">
+    <a href="{{ page.deliverable | relative_url }}" class="btn btn--primary" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> View the full document</a>
+    <a href="{{ page.deliverable | relative_url }}" class="btn btn--outline" download="Carolina-Pinto-{{ doc_name }}"><i class="fa-solid fa-download"></i> Download PDF</a>
+    {% if page.deliverable_extra %}<a href="{{ page.deliverable_extra | relative_url }}" class="btn btn--outline" download><i class="fa-solid fa-table"></i> {{ page.deliverable_extra_label }}</a>{% endif %}
+  </div>
+  {% elsif page.project_url %}
   <a href="{{ page.project_url }}" class="btn btn--primary" target="_blank" rel="noopener">View the full deliverable <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   {% endif %}
 </div>
 
 {{ content }}
+
+{% if page.preview %}
+<h2>The deliverable</h2>
+<a class="deliverable-preview" href="{{ page.deliverable | relative_url }}" target="_blank" rel="noopener" aria-label="Open the full document">
+  <img src="{{ page.preview | relative_url }}" alt="First page of {{ page.title }}" loading="lazy">
+  <span class="deliverable-preview__bar"><span><i class="fa-regular fa-file-pdf"></i> PDF · {{ page.deliverable_pages }} page{% if page.deliverable_pages != 1 %}s{% endif %}{% if page.preview_caption %} · {{ page.preview_caption }}{% endif %}</span><span>Open full document <i class="fa-solid fa-arrow-up-right-from-square"></i></span></span>
+</a>
+{% endif %}
 
 <p class="project-back"><a href="{{ '/projects/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> All projects</a></p>

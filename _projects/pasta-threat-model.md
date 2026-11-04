@@ -5,6 +5,9 @@ category_slug: risk-threat
 order: 7
 featured: true
 skills: ["PASTA", "Threat Modeling", "API Security", "PKI / AES / RSA", "SHA-256"]
+deliverable: "/assets/projects/pasta-threat-model.pdf"
+deliverable_pages: 2
+preview: "/assets/images/projects/pasta-threat-model.jpg"
 project_url: "https://drive.google.com/file/d/1voXJ1kN_vvJAcBJLCI5heOdsTzmnqZhQ/view?usp=sharing"
 ---
 

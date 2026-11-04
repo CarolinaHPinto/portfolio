@@ -4,6 +4,9 @@ excerpt: "Used SQL filters to investigate suspicious login attempts, such as fai
 category_slug: linux-sql
 order: 23
 skills: ["SQL", "WHERE / AND / OR / NOT", "Log Investigation"]
+deliverable: "/assets/projects/sql-filters.pdf"
+deliverable_pages: 3
+preview: "/assets/images/projects/sql-filters.jpg"
 project_url: "https://drive.google.com/file/d/12XMwehyWkGRk9DHbfxae6YQWNPgtpLiQ/view?usp=sharing"
 ---
 

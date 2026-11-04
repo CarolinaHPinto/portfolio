@@ -4,6 +4,9 @@ excerpt: "Analyzed a tcpdump capture to diagnose why customers couldn't reach a 
 category_slug: incident-response
 order: 11
 skills: ["tcpdump", "DNS", "UDP / ICMP", "Network Troubleshooting"]
+deliverable: "/assets/projects/dns-incident.pdf"
+deliverable_pages: 1
+preview: "/assets/images/projects/dns-incident.jpg"
 project_url: "https://drive.google.com/file/d/1g2S-gMPjmbWYGgF1vBgzLj8VmxBTibiT/view?usp=sharing"
 ---
 

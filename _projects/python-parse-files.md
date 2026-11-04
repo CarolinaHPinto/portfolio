@@ -4,6 +4,9 @@ excerpt: "Imported and parsed login log files with Python so they can be analyze
 category_slug: python
 order: 19
 skills: ["Python", "File Handling", "Log Parsing"]
+deliverable: "/assets/projects/python-parse-files.pdf"
+deliverable_pages: 2
+preview: "/assets/images/projects/python-parse-files.jpg"
 project_url: "https://drive.google.com/file/d/1N3K8vDdX8zvpktymUYudM5UnH1WUxeuS/view?usp=sharing"
 ---
 

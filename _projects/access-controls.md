@@ -4,6 +4,9 @@ excerpt: "Traced an unauthorized payroll transaction to a contractor account tha
 category_slug: grc
 order: 4
 skills: ["Access Control", "Least Privilege", "Account Lifecycle", "Log Review"]
+deliverable: "/assets/projects/access-controls.pdf"
+deliverable_pages: 2
+preview: "/assets/images/projects/access-controls.jpg"
 project_url: "https://drive.google.com/file/d/1PqrK8qCFQ1LfpeIDr9pq2YzoBlj7SEbc/view?usp=sharing"
 ---
 

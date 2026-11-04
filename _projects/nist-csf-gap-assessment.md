@@ -5,6 +5,9 @@ category_slug: grc
 order: 1
 featured: true
 skills: ["NIST CSF 2.0", "Gap Assessment", "GLBA Safeguards Rule", "Maturity Scoring"]
+deliverable: "/assets/projects/nist-csf-gap-assessment.pdf"
+deliverable_pages: 5
+preview: "/assets/images/projects/nist-csf-gap-assessment.jpg"
 project_url: "https://drive.google.com/file/d/1YnAN8p1AbFMRrtaaUUQzZ265hOSmjfaC/view?usp=sharing"
 ---
 

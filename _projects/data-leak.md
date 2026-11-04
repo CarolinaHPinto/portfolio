@@ -4,6 +4,9 @@ excerpt: "Analyzed how internal product files were accidentally shared publicly 
 category_slug: grc
 order: 5
 skills: ["Least Privilege", "Data Protection", "Control Analysis"]
+deliverable: "/assets/projects/data-leak.pdf"
+deliverable_pages: 4
+preview: "/assets/images/projects/data-leak.jpg"
 project_url: "https://drive.google.com/file/d/1u0R89TAfGV3qiW4z2J82JHxkTCS1_9aV/view?usp=sharing"
 ---
 
